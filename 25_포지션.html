@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25_포지션</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #d1{
+            background: #cfc;
+            height: 300px;
+            /* 
+            #d1안에 포함된 p태그 모두 position 속성값으로 독립, 분리되어 사이트에서 인식하지 못하는 상태
+            => 아래 태그 작성을 해야하므로 강제로 높이값을 잡아 공간인식 시킬것임
+            (단, 웹사이트 ui구조를 작성할 때 절대 이렇게 높이값을 잡아서는 안됨)
+            */
+        }
+        #d1 p{
+            width: 100px;
+            height: 100px;
+            background: #0c0; 
+        }
+        #d1 .p1{
+            position:absolute;
+            top:0;
+            left:0;
+        }
+        #d1 .p2{
+            position: absolute;
+            top:100px;
+            left:100px;
+        }
+        #d1 .p3{
+            position:absolute;
+            top:200px;
+            left:200px;
+        }
+        #d2{
+            background: #fee;
+            width: 400px;
+            position: relative;
+            /* 
+            {position:absolute} 사용시 부모태그에게
+            {position:relative} 를 항상 적용해줘야 함
+            : 기준이다 라는 뜻으로 사용하는데, 
+            만약 부모에게 이 기준이 없다면
+            브라우저 위치기준으로 인식하게 될 것임
+            */
+        }
+        #d2 p{
+            width: 100px;
+            height: 100px;
+            background: #f00;
+        }
+        #d2 .p1{
+            margin-bottom: 300px;
+        }
+        #d2 .p2{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        #d2 .p3{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        #d2 .p4{}
+        #d3{
+            background: #cf3;
+            width: 400px;
+            position: relative;
+        }
+        #d3 p{
+            width: 100px;
+            height: 100px;
+            background: #3cf;
+        }
+        #d3 .p2{
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: #f60;
+            width: 200px;
+        }
+        #d3 .p2 span{
+            display: block;
+            width: 50px;
+            height: 50px;
+            background: #fc0;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        #d3 .p3{
+            background: #f90;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        #d3 .p3 span{
+            display: block;
+            width: 30px;
+            height: 30px;
+            background: #06f;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        #d3 .p5{
+            position: absolute;
+            bottom: 0;
+            left: 100px;
+        }
+        #d3 .p6{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        /* 
+        1) p 태그 안쪽으로 블록요소 태그는 못들어옴
+        => 인라인요소(span, strong,,,), 글자내용, 이미지 들만 들어올 수 있음
+
+        2) span태그 = 인라인요소 = 공간값 못가짐
+
+        3) 인라인요소 => 블록요소 변경
+        {display:block}
+
+        {position:absolute}를 가진 태그는 부모태그에게 {position:relative} 가 없으면~
+
+        1) 기준을 찾으러 거슬러 올라감
+        부모 -> 조부모 -> 증조부모...
+        1단계씩 올라가서 기준을 찾음
+        현재 #d3(조부모) 기준으로 우측, 아래 .p6 그 뒤에 깔려있어서 안보였음
+
+        2) 1번의 경우처럼 거슬러 올라갔을 때 기준이 없을 경우, 최종 웹브라우저를 기준으로 자리를 인식하게 됨
+        */
+    </style>
+</head>
+<body>
+    <div id="d1">
+        <p class="p1">d1_1</p>
+        <p class="p2">d1_2</p>
+        <p class="p3">d1_3</p>
+    </div>
+    <div id="d2">
+        <p class="p1">d2_1</p>
+        <p class="p2">d2_2</p>
+        <p class="p3">d2_3</p>
+        <p class="p4">d2_4</p>
+    </div>
+    <div id="d3">
+        <p class="p1">d3_1</p>
+        <p class="p2">
+            d3_2
+            <span></span> 
+        </p>
+        <p class="p3">
+            d3_3
+            <span></span>
+        </p>
+        <p class="p4">d3_4</p>
+        <p class="p5">d3_5</p>
+        <p class="p6">d3_6</p>
+    </div>
+</body>
+</html>

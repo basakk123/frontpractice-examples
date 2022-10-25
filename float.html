@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #whole{
+            width: 440px;
+            background: yellow;
+            padding: 10px;
+        }
+        #whole::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        #whole .banner{
+            width: 230px;
+            float: left; 
+        }
+        #whole .banner p{
+            width: 100px;
+            height: 100px;
+            background: pink;
+            float: left;
+        }
+        #whole .banner .bn1{
+            margin-right: 10px;
+        }
+        #whole .banner .bn3{
+            margin-right: 10px;
+        }
+        #whole .event{
+            width: 200px;
+            height: 200px;
+            background: pink;
+            float: left;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="whole">
+        <div class="banner">
+            <p class="bn1">banner1</p>
+            <p class="bn2">banner2</p>
+            <p class="bn3">banner3</p>
+            <p class="bn4">banner4</p>
+        </div>
+        <div class="event">event</div>
+    </div>
+</body>
+</html>

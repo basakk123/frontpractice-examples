@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>21_가로배열연습</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            color: #111;
+            text-decoration: none;
+        }
+        img{
+            border: none;
+            vertical-align: top;
+        }
+        #test{
+            background: #ffa;
+            /* 130x3=390
+            +15x2=30 = 420 */
+            width: 420px;
+        }
+        #test::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        #test p{
+            width: 130px;
+            height: 130px;
+            background: #fc0;
+            float: left;
+            margin-right: 15px;
+        }
+        #test p:last-child{
+            margin-right: 0;
+        }
+        #d1{
+            background: #f31af3;
+            width: 320px;
+        }
+        #d1::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        #d1 p{
+            width: 100px;
+            height: 100px;
+            background: rgb(240, 164, 188);
+            float:left;
+            margin-right: 10px;
+        }
+        #d1 p:last-child{
+            margin-right: 0;
+        }
+        #d2{
+            background: orange;
+            width: 525px;
+        }
+        #d2::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        #d2 p{
+            width: 120px;
+            height: 120px;
+            background: yellow;
+            float:left;
+            margin-right: 15px;
+        }
+        #d2 p:last-child{
+            margin-right: 0;
+        }
+        #d3{
+            background: green;
+            width: 548px;
+        }
+        #d3::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        #d3 p{
+            width: 120px;
+            height: 120px;
+            background: greenyellow;
+            float:left;
+            margin-right: 20px;
+            border: 1px solid #111;
+        }
+        #d3 p:last-child{
+            margin-right: 0;
+        }
+        #d4{
+            background: blue;
+            width: 370px;
+        }
+        #d4::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        #d4 p{
+            width: 110px;
+            height: 110px;
+            background: rgb(46, 174, 224);
+            float:left;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+        #d4 .d43{ 
+            margin-right: 0;
+        }
+        #d4 p:last-child{
+            margin-right: 0;
+        }
+        #d5{
+            background: #faa;
+            width: 370px;
+        }
+        #d5::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        #d5 p{
+            width: 110px;
+            height: 100px;
+            background: #fce;
+            float: left;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+        #d5 p:nth-child(3),
+        #d5 p:nth-child(6){
+            margin-right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="test">
+        <p>연습1</p>
+        <p>연습2</p>
+        <p>연습3</p>
+    </div>
+    <br>
+    <br>
+    <div id="d1">
+        <p>d1_1</p>
+        <p>d1_2</p>
+        <p>d1_3</p>
+    </div>
+    <br>
+    <br>
+    <div id="d2">
+        <p>d2_1</p>
+        <p>d2_2</p>
+        <p>d2_3</p>
+        <p>d2_4</p>
+    </div>
+    <br>
+    <br>
+    <div id="d3">
+        <p>d3_1</p>
+        <p>d3_2</p>
+        <p>d3_3</p>
+        <p>d3_4</p>
+    </div>
+    <br>
+    <br>
+    <div id="d4">
+        <p class="d41">d4_1</p>
+        <p class="d42">d4_2</p>
+        <p class="d43">d4_3</p>
+        <p class="d44">d4_4</p>
+        <p class="d45">d4_5</p>
+        <p class="d46">d4_6</p>
+    </div>
+    <br>
+    <br>
+    <div id="d5">
+        <p>d5_1</p>
+        <p>d5_2</p>
+        <p>d5_3</p>
+        <p>d5_4</p>
+        <p>d5_5</p>
+        <p>d5_6</p>
+    </div>
+</body>
+</html>
