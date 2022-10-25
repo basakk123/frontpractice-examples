@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>3자료형_빈데이터</title>
+<link href="css/reset.css" rel="stylesheet">
+<link href="css/template.css" rel="stylesheet">
+</head>
+
+<body>
+<section>
+	<h2>
+        null 과 undefined
+    </h2>
+    <textarea class="ht5">
+        빈데이터
+        null          : 변수에 null이라는 빈값을 저장한 경우
+                        (값이 존재하지 않음)
+        undefined  : 변수에 선언만 하고, 값이 저장 안된 경우
+                        (값이 할당되지 않음)
+                    
+    </textarea>
+    <script>
+        var good;
+        console.log(typeof(good));
+
+        //var name=prompt('이름입력','');
+        //alert('환영합니다' + name + '님 반갑습니다');
+
+        // null 다이얼로그창 : 취소 -> null 값
+        // null을 사용할 때 "user는 존재하지 않는다"
+        var user=null;
+        console.log(user); // 출력null
+
+        console.log(typeof null); // object
+        // null 객체아님. 자바스크립트 초기버전 오류임
+        // 하위버전 호환성 때문 수정 안함
+
+        console.log('문자'*123); // * 곱하기 (NaN)
+        console.log(typeof'문자'+123);
+
+        console.log('자료형확인해보기');
+        var hong='홍길동';
+        var kim;
+
+        console.log(typeof 10);
+        console.log(typeof hong);
+        console.log(typeof true);
+        console.log(typeof kim);
+        console.log(typeof user);
+    </script>
+</section>
+
+<section>
+	<h2>
+        학습주제
+    </h2>
+    <textarea class="ht5">
+    학습내용정리
+    </textarea>
+</section>
+
+</body>
+</html>
+
+
+
+
+

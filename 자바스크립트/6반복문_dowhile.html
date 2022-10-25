@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>6반복문_dowhile</title>
+<link href="css/reset.css" rel="stylesheet">
+<link href="css/template.css" rel="stylesheet">
+</head>
+
+<body>
+<section>
+	<h2>
+        2) do while 문
+    </h2>
+    <textarea class="ht5">
+        2) do while 문
+        조건식 만족 여부에 상관없이 실행문을 반드시 한번은 실행한 후,
+        조건식을 검사함
+        
+        var 변수 =초기값;
+        do{
+            실행문;     // 1) 우선 실행
+            증감식;     // 3)
+        }while(조건식); // 2) 1번 실행문 먼저 while 조건식 검사
+                            // 참 true 경우 3) 증감식 실행
+                            // 거짓 false 경우 3) 증감식 실행안됨
+    </textarea>
+    <script>
+        var i=0;
+        do{
+            console.log(i); // 1) 우선 0 출력
+            i++;              // 3) 1,2,3,,,,9
+        }while(i<10);       // 2) 조건식 true 증감식
+
+        var hello=10;
+        do{
+            console.log('안녕하세요');
+            hello++;
+        }while(hello<3);
+
+        var x=1;
+        var sum=0;
+        do{
+            sum+=x;     // sum(0)+1+2+3+4+5+6+7+8+9+10 
+            x++;
+        }while(x<=10);
+        document.write('합계는? ' +sum);    // 출력 55
+
+        var attack=10;
+        var depend=1;
+        do{
+            document.write('게임시작!');
+            attack++;
+        }while(attack==depend)
+
+        var age=30;
+        do{
+            document.write('당신의 ' +age+' 번째 생일을 축하합니다<br>');
+            age--;
+        }while(age>25);
+
+        var count=10;
+        var newy=1;
+        do{
+            document.write('카운트다운시작!'+count+'<br>');
+            count--;
+        }while(count>=newy);
+        document.write('<strong>해피뉴이어!</strong>');
+
+        var num=4;
+        do{
+            alert('경고창이 뜨네요!');
+            alert(4-num+'번째 반복');
+            num--;
+        }while(num);
+    </script>
+</section>
+
+<section>
+	<h2>
+        학습주제
+    </h2>
+    <textarea class="ht5">
+    학습내용정리
+    </textarea>
+</section>
+
+</body>
+</html>
+
+
+
+
+
